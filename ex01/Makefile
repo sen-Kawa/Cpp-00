@@ -4,7 +4,7 @@ CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98 
 
-SRCS = .cpp
+SRCS = main.cpp PhoneBook.class.cpp Contact.class.cpp
 
 RM = rm -f
 
