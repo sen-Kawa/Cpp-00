@@ -3,9 +3,13 @@
 
 #include <iostream>
 #include <string>
+#include "Contact.class.hpp"
 
 class PhoneBook
 {
+	private:
+		Contact	contact[8];
+
 	public:
 		PhoneBook(void);
 		~PhoneBook(void);
