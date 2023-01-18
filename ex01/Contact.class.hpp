@@ -7,6 +7,7 @@
 class Contact
 {
 	private:
+
 		std::string first_name;
 		std::string last_name;
 		std::string nickname;
@@ -14,6 +15,9 @@ class Contact
 		std::string darkest_secret;
 
 	public:
+
+		void fill_contact(void);
+
 		Contact(void);
 		~Contact(void);
 };
