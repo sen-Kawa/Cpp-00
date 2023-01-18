@@ -11,6 +11,7 @@ class PhoneBook
 		Contact	contact[8];
 
 	public:
+		int	add_contact(int contact_count);
 		PhoneBook(void);
 		~PhoneBook(void);
 };
