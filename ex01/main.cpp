@@ -21,6 +21,7 @@ int	main(void)
 		}
 		if (action.compare("SEARCH") == 0)
 		{
+			phonebook.display_contacts();
 			std::cout << "Searching..." << std::endl;
 		}
 	}
