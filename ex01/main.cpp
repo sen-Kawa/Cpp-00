@@ -14,12 +14,14 @@ int	main(void)
 		getline(std::cin, action);
 		if (action.compare("ADD") == 0)
 		{
-			std::cout << "Adding.." << std::endl;
+			std::cout << "Adding..." << std::endl;
+			if (contact_count == 7)
+				contact_count = 0;
 			contact_count = phonebook.add_contact(contact_count);
 		}
 		if (action.compare("SEARCH") == 0)
 		{
-			std::cout << "Searching.." << std::endl;
+			std::cout << "Searching..." << std::endl;
 		}
 	}
 	return (0);
