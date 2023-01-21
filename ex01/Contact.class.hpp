@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <iomanip>
 
 class Contact
 {
@@ -19,10 +20,12 @@ class Contact
 		void fill_nickname(void);
 		void fill_phone_number(void);
 		void fill_darkest_secret(void);
+		std::string format_detail(std::string detail);
 
 	public:
 
 		void fill_contact(void);
+		void print_contact(int index);
 
 		Contact(void);
 		~Contact(void);

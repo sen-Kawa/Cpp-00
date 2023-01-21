@@ -1,4 +1,6 @@
 #include "Contact.class.hpp"
+#include <iostream>
+#include <string>
 
 void	Contact::fill_contact(void)
 {
@@ -7,6 +9,34 @@ void	Contact::fill_contact(void)
 	fill_nickname();
 	fill_phone_number();
 	fill_darkest_secret();
+}
+
+void	Contact::print_contact(int index)
+{
+	std::string	separator;
+
+	separator = "|";
+	std::cout
+		<< std::right << separator
+		<< std::setw(10) << index << separator
+		<< std::setw(10) << format_detail(first_name) << separator
+		<< std::setw(10) << format_detail(last_name) << separator
+		<< std::setw(10) << format_detail(nickname) << separator
+	<< std::endl;
+}
+
+std::string	Contact::format_detail(std::string detail)
+{
+	std::string	substracted;
+
+	if (detail.length() <= 10)
+		return (detail);
+	else
+	{
+		substracted = detail.substr(0, 9);
+		substracted += ".";
+		return (substracted);
+	}
 }
 
 void	Contact::fill_first_name(void)

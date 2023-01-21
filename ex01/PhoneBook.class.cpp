@@ -1,6 +1,7 @@
 #include "PhoneBook.class.hpp"
 #include <iomanip>
 #include <ios>
+#include <iostream>
 #include <ostream>
 #include <string>
 
@@ -36,6 +37,8 @@ void	PhoneBook::display_header()
 void	PhoneBook::display_contacts()
 {
 		PhoneBook::display_header();
+		for (int i = 0; i < 8; i++)
+			contact[i].print_contact(i);
 }
 
 PhoneBook::PhoneBook(void)
