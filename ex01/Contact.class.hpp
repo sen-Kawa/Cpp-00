@@ -25,7 +25,8 @@ class Contact
 	public:
 
 		void fill_contact(void);
-		void print_contact(int index);
+		void print_list_contacts(int index);
+		void print_contact(void);
 
 		Contact(void);
 		~Contact(void);

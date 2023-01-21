@@ -11,7 +11,18 @@ void	Contact::fill_contact(void)
 	fill_darkest_secret();
 }
 
-void	Contact::print_contact(int index)
+void	Contact::print_contact(void)
+{
+	std::cout
+		<< "First name: " << first_name << std::endl
+		<< "Last name: " << last_name << std::endl
+		<< "Nickname: " << nickname << std::endl
+		<< "Phone number: " << phone_number << std::endl
+		<< "Darkest secret: " << darkest_secret << std::endl
+	<< std::endl;
+}
+
+void	Contact::print_list_contacts(int index)
 {
 	std::string	separator;
 
@@ -41,55 +52,75 @@ std::string	Contact::format_detail(std::string detail)
 
 void	Contact::fill_first_name(void)
 {
-	std::cout << "Enter your first name" << std::endl;		
-	getline(std::cin, first_name);
+	std::cout
+		<< "Enter your first name"
+	<< std::endl;		
+	std::getline(std::cin, first_name);
 	if (first_name.length() == 0)
 	{
-		std::cout << "Invalid empty field" << std::endl;
+		std::cout
+			<< "Invalid empty field"
+		<< std::endl;
 		fill_first_name();
 	}
 }
 
 void	Contact::fill_last_name(void)
 {
-	std::cout << "Enter your last name" << std::endl;		
+	std::cout
+		<< "Enter your last name"
+	<< std::endl;		
 	getline(std::cin, last_name);
 	if (last_name.length() == 0)
 	{
-		std::cout << "Invalid empty field" << std::endl;
+		std::cout
+			<< "Invalid empty field"
+		<< std::endl;
 		fill_last_name();
 	}
 }
 
 void	Contact::fill_nickname(void)
 {
-	std::cout << "Enter your nickname" << std::endl;		
+	std::cout
+		<< "Enter your nickname" 
+	<< std::endl;		
 	getline(std::cin, nickname);
 	if (nickname.length() == 0)
 	{
-		std::cout << "Invalid empty field" << std::endl;
+		std::cout
+			<< "Invalid empty field"
+		<< std::endl;
 		fill_nickname();
 	}
 }
 
 void	Contact::fill_phone_number(void)
 {
-	std::cout << "Enter your phonenumber" << std::endl;		
+	std::cout
+		<< "Enter your phonenumber"
+	<< std::endl;		
 	getline(std::cin, phone_number);
 	if (phone_number.length() == 0)
 	{
-		std::cout << "Invalid empty field" << std::endl;
+		std::cout
+			<< "Invalid empty field"
+		<< std::endl;
 		fill_phone_number();
 	}
 }
 
 void	Contact::fill_darkest_secret(void)
 {
-	std::cout << "Enter your darkest secret" << std::endl;		
+	std::cout
+		<< "Enter your darkest secret"
+	<< std::endl;		
 	getline(std::cin, darkest_secret);
 	if (darkest_secret.length() == 0)
 	{
-		std::cout << "Invalid empty field" << std::endl;
+		std::cout
+			<< "Invalid empty field"
+		<< std::endl;
 		fill_darkest_secret();
 	}
 }
