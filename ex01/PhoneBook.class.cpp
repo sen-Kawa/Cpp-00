@@ -3,6 +3,7 @@
 #include <ios>
 #include <iostream>
 #include <ostream>
+#include <sstream>
 #include <string>
 
 int	PhoneBook::add_contact(int contact_count)
@@ -47,6 +48,7 @@ void	PhoneBook::display_header()
 void	PhoneBook::display_contacts()
 {
 		std::string	chosen = "0";
+		int	index;
 
 		PhoneBook::display_header();
 		for (int i = 0; i < 8; i++)
@@ -66,7 +68,8 @@ void	PhoneBook::display_contacts()
 		}
 		else
 		{
-			contact[stoi(chosen)].print_contact();
+			std::istringstream(chosen) >> index;
+			contact[index].print_contact();
 		}
 }
 
